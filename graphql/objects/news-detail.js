@@ -4,6 +4,8 @@ const {
     GraphQLObjectType,
     GraphQLString
 } = require('graphql');
+const ImageDetail = require('./image-detail');
+const VideoDetail = require('./video-detail');
 const axios = require('../../config/axios');
 
 const NewsDetail = new GraphQLObjectType({
@@ -63,12 +65,28 @@ const NewsDetail = new GraphQLObjectType({
             resolve: source => source.keystone_image_2x
         },
         release_images: {
-            type: GraphQLList(GraphQLString),
-            resolve: source => source.release_images
+            type: GraphQLList(ImageDetail),
+            resolve(source) {
+                return source.release_images
+                    ? Promise.all(source.release_images.map(async imageId => {
+                        const path = `/image/${imageId}`;
+                        const {data} = await axios.get(path);
+                        return data;
+                    }))
+                    : [];
+            }
         },
         release_videos: {
-            type: GraphQLList(GraphQLString),
-            resolve: source => source.release_videos
+            type: GraphQLList(VideoDetail),
+            resolve(source) {
+                return source.release_videos
+                    ? Promise.all(source.release_videos.map(async videoId => {
+                        const path = `/video/${videoId}`;
+                        const {data} = await axios.get(path);
+                        return data;
+                    }))
+                    : [];
+            }
         }
     }
 });
