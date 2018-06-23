@@ -1,12 +1,12 @@
-require('dotenv-safe').config();
 const graphqlHTTP = require('express-graphql');
 const app = require('express')();
+const config = require('./config');
 
 app.use('/', graphqlHTTP({
     schema: require('./graphql/schema'),
     graphiql: true
 }));
 
-app.listen(5000, () => {
-    console.log('Server is now listening on port 5000');
+app.listen(config.app.port, () => {
+    console.log(`Server is now listening on port ${config.app.port}`);
 });
