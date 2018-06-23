@@ -1,3 +1,4 @@
+require('dotenv-safe').config();
 const graphqlHTTP = require('express-graphql');
 const app = require('express')();
 
