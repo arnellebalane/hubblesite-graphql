@@ -14,7 +14,8 @@ const schema = new GraphQLSchema({
             image_detail: require('./objects/image-detail').rootQuery,
             video_list: require('./objects/video-list').rootQuery,
             video_detail: require('./objects/video-detail').rootQuery,
-            glossary_list: require('./objects/glossary-list').rootQuery
+            glossary_list: require('./objects/glossary-list').rootQuery,
+            glossary_term: require('./objects/glossary-term').rootQuery
         }
     })
 });
