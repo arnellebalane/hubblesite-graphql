@@ -7,8 +7,8 @@ const {
 } = require('graphql');
 const axios = require('../../config/axios');
 
-const VideoList = new GraphQLObjectType({
-    name: 'VideoList',
+const VideoItem = new GraphQLObjectType({
+    name: 'VideoItem',
 
     fields: {
         id: {
@@ -39,7 +39,7 @@ const VideoList = new GraphQLObjectType({
 });
 
 const rootQuery = {
-    type: GraphQLList(VideoList),
+    type: GraphQLList(VideoItem),
 
     args: {
         collection_name: {
@@ -63,6 +63,6 @@ const rootQuery = {
     }
 };
 
-VideoList.rootQuery = rootQuery;
+VideoItem.rootQuery = rootQuery;
 
-module.exports = VideoList;
+module.exports = VideoItem;

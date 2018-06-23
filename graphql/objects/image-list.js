@@ -7,8 +7,8 @@ const {
 } = require('graphql');
 const axios = require('../../config/axios');
 
-const ImageList = new GraphQLObjectType({
-    name: 'ImageList',
+const ImageItem = new GraphQLObjectType({
+    name: 'ImageItem',
 
     fields: {
         id: {
@@ -35,7 +35,7 @@ const ImageList = new GraphQLObjectType({
 });
 
 const rootQuery = {
-    type: GraphQLList(ImageList),
+    type: GraphQLList(ImageItem),
 
     args: {
         collection_name: {
@@ -59,6 +59,6 @@ const rootQuery = {
     }
 };
 
-ImageList.rootQuery = rootQuery;
+ImageItem.rootQuery = rootQuery;
 
-module.exports = ImageList;
+module.exports = ImageItem;
