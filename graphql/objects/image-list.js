@@ -40,17 +40,11 @@ const rootQuery = {
     args: {
         collection_name: {
             type: GraphQLString,
-            defaultValue: 'science',
-            description: [
-
-            ].join('\n')
+            defaultValue: 'science'
         },
         page: {
             type: GraphQLString,
-            defaultValue: 1,
-            description: [
-
-            ].join('\n')
+            defaultValue: 1
         }
     },
 

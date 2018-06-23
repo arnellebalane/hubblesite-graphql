@@ -78,13 +78,7 @@ const rootQuery = {
 
     args: {
         which: {
-            type: GraphQLNonNull(GraphQLString),
-            description: [
-                `Possible values:`,
-                `  - 'last', the last news release published`,
-                `  - 'first', the first news release published`,
-                `  - the release identifier, in the format YYYY-NN, unique for news release`
-            ].join('\n')
+            type: GraphQLNonNull(GraphQLString)
         }
     },
 

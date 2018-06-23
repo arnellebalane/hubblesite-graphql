@@ -31,12 +31,7 @@ const rootQuery = {
     args: {
         page: {
             type: GraphQLString,
-            defaultValue: 1,
-            description: [
-                `The possible values are any integer 1 or larger, or 'all' to reteurn all items.`,
-                `Any other values will default to '1'.`,
-                `Unless the value passed is 'all', it returns 25 items.`
-            ].join('\n')
+            defaultValue: 1
         }
     },
 
