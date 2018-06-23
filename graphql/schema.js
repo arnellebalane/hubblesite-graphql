@@ -9,7 +9,8 @@ const schema = new GraphQLSchema({
 
         fields: {
             news_list: require('./objects/news-list').rootQuery,
-            news_detail: require('./objects/news-detail').rootQuery
+            news_detail: require('./objects/news-detail').rootQuery,
+            image_list: require('./objects/image-list').rootQuery
         }
     })
 });
