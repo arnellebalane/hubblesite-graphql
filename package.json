@@ -4,7 +4,7 @@
   "description": "A GraphQL wrapper to the HubbleSite API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz"
   },
   "author": "Arnelle Balane <arnellebalane@gmail.com> (https://arnellebalane.com/)",
   "keywords": [
@@ -12,5 +12,14 @@
     "api",
     "graphql"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "commitizen": "2.10.1",
+    "cz-conventional-changelog": "2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }
