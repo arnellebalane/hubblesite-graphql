@@ -6,8 +6,8 @@ const {
 } = require('graphql');
 const axios = require('../../config/axios');
 
-const News = new GraphQLObjectType({
-    name: 'News',
+const NewsList = new GraphQLObjectType({
+    name: 'NewsList',
 
     fields: {
         news_id: {
@@ -26,7 +26,7 @@ const News = new GraphQLObjectType({
 });
 
 const rootQuery = {
-    type: GraphQLList(News),
+    type: GraphQLList(NewsList),
 
     args: {
         page: {
@@ -50,6 +50,6 @@ const rootQuery = {
     }
 };
 
-News.rootQuery = rootQuery;
+NewsList.rootQuery = rootQuery;
 
-module.exports = News;
+module.exports = NewsList;
