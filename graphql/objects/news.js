@@ -1,8 +1,8 @@
 const {
-    GraphQLObjectType,
-    GraphQLString,
     GraphQLList,
-    GraphQLNonNull
+    GraphQLNonNull,
+    GraphQLObjectType,
+    GraphQLString
 } = require('graphql');
 const axios = require('../../config/axios');
 
