@@ -8,7 +8,7 @@ const schema = new GraphQLSchema({
         name: 'RootType',
 
         fields: {
-
+            news: require('./objects/news').rootQuery
         }
     })
 });
