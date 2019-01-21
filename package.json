@@ -15,6 +15,13 @@
     "graphql"
   ],
   "license": "MIT",
+  "dependencies": {
+    "axios": "0.18.0",
+    "dotenv-safe": "6.0.0",
+    "express": "4.16.3",
+    "express-graphql": "0.6.12",
+    "graphql": "0.13.2"
+  },
   "devDependencies": {
     "commitizen": "2.10.1",
     "cz-conventional-changelog": "2.1.0",
@@ -24,12 +31,5 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "axios": "0.18.0",
-    "dotenv-safe": "6.0.0",
-    "express": "4.16.3",
-    "express-graphql": "0.6.12",
-    "graphql": "0.13.2"
   }
 }
