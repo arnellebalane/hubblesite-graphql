@@ -17,15 +17,15 @@
   "license": "MIT",
   "dependencies": {
     "axios": "0.18.0",
-    "dotenv-safe": "6.0.0",
-    "express": "4.16.3",
-    "express-graphql": "0.6.12",
-    "graphql": "0.13.2"
+    "dotenv-safe": "6.1.0",
+    "express": "4.16.4",
+    "express-graphql": "0.7.1",
+    "graphql": "14.1.1"
   },
   "devDependencies": {
-    "commitizen": "2.10.1",
+    "commitizen": "3.0.5",
     "cz-conventional-changelog": "2.1.0",
-    "nodemon": "1.17.5"
+    "nodemon": "1.18.9"
   },
   "config": {
     "commitizen": {
