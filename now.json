@@ -8,6 +8,9 @@
     "src": "/(.*)",
     "dest": "index.js"
   }],
+  "alias": [
+    "hubblesite-graphql.arnelle.me"
+  ],
   "env": {
     "API_ENDPOINT": "http://hubblesite.org/api/v3"
   }
