@@ -7,4 +7,6 @@ app.use('/', graphqlHTTP({
     graphiql: true
 }));
 
-module.exports = app;
+app.listen(config.app.port, () => {
+    console.log(`Server is now listening on port ${config.app.port}`);
+});
